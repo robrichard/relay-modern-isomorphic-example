@@ -1,4 +1,6 @@
-# Relay TodoMVC
+# Isomorphic Relay Modern TodoMVC
+
+This is the [todo-modern example](https://github.com/relayjs/relay-examples/tree/master/todo-modern) updated to use universal/isomorphic/server side renderering. 
 
 ## Installation
 
