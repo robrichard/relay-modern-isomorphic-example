@@ -6,6 +6,10 @@ Base64@~0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/Base64/-/Base64-0.2.1.tgz#ba3a4230708e186705065e66babdd4c35cf60028"
 
+a-sync-waterfall@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/a-sync-waterfall/-/a-sync-waterfall-1.0.0.tgz#38e8319d79379e24628845b53b96722b29e0e47c"
+
 abbrev@1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
@@ -122,7 +126,7 @@ arrify@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
 
-asap@~2.0.3:
+asap@^2.0.3, asap@~2.0.3:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.5.tgz#522765b50c3510490e52d7dcfe085ef9ba96958f"
 
@@ -408,12 +412,12 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-relay@^1.0.1-a:
-  version "1.0.1-rc.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-1.0.1-rc.3.tgz#06cb3f7fc30a033aa8c0bb31b9dc85d6ba7d31ca"
+babel-plugin-relay@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/babel-plugin-relay/-/babel-plugin-relay-1.0.1.tgz#15e8a4f6fb488a39133a312595816dd9cf44f3a0"
   dependencies:
     babel-runtime "^6.23.0"
-    graphql "^0.9.1"
+    graphql "^0.9.5"
 
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
@@ -1047,6 +1051,10 @@ camelcase@^1.0.2:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
 
+camelcase@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/camelcase/-/camelcase-2.1.1.tgz#7c1d16d679a1bbe59ca02cacecfb011e201f5a1f"
+
 camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
@@ -1072,7 +1080,7 @@ chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chokidar@^1.0.0, chokidar@^1.6.1:
+chokidar@^1.0.0, chokidar@^1.6.0, chokidar@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-1.6.1.tgz#2f4447ab5e96e50fb3d789fd90d4c72e0e4c70c2"
   dependencies:
@@ -1113,7 +1121,7 @@ cliui@^2.1.0:
     right-align "^0.1.1"
     wordwrap "0.0.2"
 
-cliui@^3.2.0:
+cliui@^3.0.3, cliui@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-3.2.0.tgz#120601537a916d29940f934da3b48d585a39213d"
   dependencies:
@@ -1897,6 +1905,12 @@ graphql@^0.9.1:
   dependencies:
     iterall "1.0.3"
 
+graphql@^0.9.5:
+  version "0.9.6"
+  resolved "https://registry.npmjs.org/graphql/-/graphql-0.9.6.tgz#514421e9d225c29dfc8fd305459abae58815ef2c"
+  dependencies:
+    iterall "^1.0.0"
+
 har-schema@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/har-schema/-/har-schema-1.0.5.tgz#d263135f43307c02c602afc8fe95970c0151369e"
@@ -2237,7 +2251,7 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-iterall@1.0.3:
+iterall@1.0.3, iterall@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.0.3.tgz#e0b31958f835013c323ff0b10943829ac69aa4b7"
 
@@ -2575,6 +2589,16 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
+nunjucks@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/nunjucks/-/nunjucks-3.0.0.tgz#0a2a8fd2942a3ba04f5ba6684e4f7f7ceaca8305"
+  dependencies:
+    a-sync-waterfall "^1.0.0"
+    asap "^2.0.3"
+    yargs "^3.32.0"
+  optionalDependencies:
+    chokidar "^1.6.0"
+
 oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
@@ -2868,15 +2892,15 @@ react-dom@^15.3.1:
     object-assign "^4.1.0"
     prop-types "~15.5.7"
 
-react-relay@^1.0.0-a:
-  version "1.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/react-relay/-/react-relay-1.0.0-rc.3.tgz#72b5c478c294aa28c6f42dae24fe666b0f3b9487"
+react-relay@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/react-relay/-/react-relay-1.0.0.tgz#e1dfe7795c1b3781ad2bc6f84495a4870c2842d7"
   dependencies:
     babel-runtime "^6.23.0"
     fbjs "^0.8.1"
     prop-types "^15.5.8"
     react-static-container "^1.0.1"
-    relay-runtime "1.0.0-rc.3"
+    relay-runtime "~1.0.0"
 
 react-static-container@^1.0.1:
   version "1.0.1"
@@ -2991,9 +3015,9 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
-relay-compiler@^1.0.0-a:
-  version "1.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/relay-compiler/-/relay-compiler-1.0.0-rc.3.tgz#cbac0db63ac88dda7dedcd116652a3a9a2edecef"
+relay-compiler@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/relay-compiler/-/relay-compiler-1.0.0.tgz#c61438ef503f7e9aa6c25938923aa2143c7c6a49"
   dependencies:
     babel-generator "6.24.0"
     babel-runtime "^6.23.0"
@@ -3002,15 +3026,15 @@ relay-compiler@^1.0.0-a:
     babylon "6.16.1"
     fb-watchman "^2.0.0"
     fbjs "^0.8.1"
-    graphql "^0.9.1"
+    graphql "^0.9.5"
     immutable "^3.8.1"
-    relay-runtime "1.0.0-rc.3"
+    relay-runtime "~1.0.0"
     signedsource "^1.0.0"
     yargs "^7.0.2"
 
-relay-runtime@1.0.0-rc.3:
-  version "1.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-1.0.0-rc.3.tgz#710b02f43050e581808bc6551f6f4ae7d17d248d"
+relay-runtime@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/relay-runtime/-/relay-runtime-1.0.0.tgz#3011ba84e844f154b14edf401950a8ed2c95cb2b"
   dependencies:
     babel-runtime "^6.23.0"
     fbjs "^0.8.1"
@@ -3672,6 +3696,10 @@ window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
 
+window-size@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/window-size/-/window-size-0.1.4.tgz#f8e1aa1ee5a53ec5bf151ffa09742a6ad7697876"
+
 wordwrap@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
@@ -3705,7 +3733,7 @@ xtend@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.1.tgz#a5c6d532be656e23db820efb943a1f04998d63af"
 
-y18n@^3.2.1:
+y18n@^3.2.0, y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
 
@@ -3714,6 +3742,18 @@ yargs-parser@^5.0.0:
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-5.0.0.tgz#275ecf0d7ffe05c77e64e7c86e4cd94bf0e1228a"
   dependencies:
     camelcase "^3.0.0"
+
+yargs@^3.32.0:
+  version "3.32.0"
+  resolved "https://registry.npmjs.org/yargs/-/yargs-3.32.0.tgz#03088e9ebf9e756b69751611d2a5ef591482c995"
+  dependencies:
+    camelcase "^2.0.1"
+    cliui "^3.0.3"
+    decamelize "^1.1.1"
+    os-locale "^1.4.0"
+    string-width "^1.0.1"
+    window-size "^0.1.4"
+    y18n "^3.2.0"
 
 yargs@^7.0.2:
   version "7.1.0"

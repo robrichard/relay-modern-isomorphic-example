@@ -5,7 +5,7 @@ This is the [todo-modern example](https://github.com/relayjs/relay-examples/tree
 ## Installation
 
 ```
-npm install
+yarn install
 ```
 
 ## Running
@@ -13,14 +13,14 @@ npm install
 Set up generated files:
 
 ```
-npm run update-schema
-npm run build
+yarn run update-schema
+yarn run build
 ```
 
 Start a local server:
 
 ```
-npm start
+yarn start
 ```
 
 ## Developing
@@ -32,19 +32,7 @@ If at any time you make changes to `data/schema.js`, stop the server,
 regenerate `data/schema.graphql`, and restart the server:
 
 ```
-npm run update-schema
-npm run build
-npm start
+yarn run update-schema
+yarn run build
+yarn start
 ```
-
-## License
-
-    This file provided by Facebook is for non-commercial testing and evaluation
-    purposes only.  Facebook reserves all rights not expressly granted.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-    FACEBOOK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
-    ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
