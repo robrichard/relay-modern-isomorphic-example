@@ -2,12 +2,11 @@
 
 import {
   createOperationSelector,
-  getOperation
+  getOperation,
 } from 'relay-runtime';
 import nunjucks from 'nunjucks';
 import React from 'react';
-import {graphql} from 'react-relay/compat';
-import {renderToString, } from 'react-dom/server';
+import {renderToString} from 'react-dom/server';
 import getRelayEnvironment from './getRelayEnvironment';
 import RelayLookupQueryRenderer from './RelayLookupQueryRenderer';
 import TodoApp from './components/TodoApp';
@@ -15,7 +14,7 @@ import rootQuery from './root';
 
 const variables = {status: null};
 
-export default function (req, res, next) {
+export default function(req, res, next) {
   const environment = getRelayEnvironment();
   const operation = createOperationSelector(
     getOperation(rootQuery),
@@ -39,12 +38,12 @@ export default function (req, res, next) {
 
       res.send(nunjucks.render('index.html', {
         renderedComponent: renderedComponent,
-        records: JSON.stringify(environment.getStore().getSource())
+        records: JSON.stringify(environment.getStore().getSource()),
       }));
     },
     onError: e => {
       console.error(e);
       res.status('500').end();
-    }
+    },
   });
 }

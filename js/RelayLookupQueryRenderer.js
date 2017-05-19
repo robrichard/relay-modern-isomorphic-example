@@ -50,7 +50,7 @@ class ReactRelayQueryRenderer extends React.Component {
             retry: () => {
               this._fetch(operation, props.cacheConfig);
             },
-          }
+          },
         };
       } else {
         this.state = {
@@ -256,7 +256,7 @@ class ReactRelayQueryRenderer extends React.Component {
 }
 
 ReactRelayQueryRenderer.childContextTypes = {
-  relay: PropTypes.object.isRequired
+  relay: PropTypes.object.isRequired,
 };
 
 function getDefaultState() {

@@ -4,7 +4,7 @@ import 'isomorphic-fetch';
 import {
   Environment,
   RecordSource,
-  Store
+  Store,
 } from 'relay-runtime';
 import network from './network';
 
