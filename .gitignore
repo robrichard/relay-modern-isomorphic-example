@@ -1,3 +1,4 @@
 .DS_Store
 __generated__/
 .idea
+node_modules

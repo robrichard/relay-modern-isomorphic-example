@@ -16,7 +16,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-  QueryRenderer,
   graphql,
 } from 'react-relay';
 import {
@@ -25,44 +24,19 @@ import {
   RecordSource,
   Store,
 } from 'relay-runtime';
-
+import RelayLookupQueryRenderer from './RelayLookupQueryRenderer';
 import TodoApp from './components/TodoApp';
-
+import rootQuery from './root';
+import getRelayEnvironment from './getRelayEnvironment';
 const mountNode = document.getElementById('root');
 
-function fetchQuery(
-  operation,
-  variables,
-) {
-  return fetch('/graphql', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query: operation.text,
-      variables,
-    }),
-  }).then(response => {
-    return response.json();
-  });
-}
-
-const modernEnvironment = new Environment({
-  network: Network.create(fetchQuery),
-  store: new Store(new RecordSource()),
-});
+const environment = getRelayEnvironment(window.records);
 
 ReactDOM.render(
-  <QueryRenderer
-    environment={modernEnvironment}
-    query={graphql`
-      query appQuery {
-        viewer {
-          ...TodoApp_viewer
-        }
-      }
-    `}
+  <RelayLookupQueryRenderer
+    lookup
+    environment={environment}
+    query={rootQuery}
     variables={{}}
     render={({error, props}) => {
       if (props) {

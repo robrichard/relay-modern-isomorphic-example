@@ -12,11 +12,12 @@
 
 import express from 'express';
 import graphQLHTTP from 'express-graphql';
+import nunjucks from 'nunjucks';
 import path from 'path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
 import {schema} from './data/schema';
-
+import renderServer from './js/renderServer';
 const APP_PORT = 3000;
 const GRAPHQL_PORT = 8080;
 
@@ -29,7 +30,7 @@ graphQLServer.listen(GRAPHQL_PORT, () => console.log(
 
 // Serve the Relay app
 const compiler = webpack({
-  entry: ['whatwg-fetch', path.resolve(__dirname, 'js', 'app.js')],
+  entry: path.resolve(__dirname, 'js', 'app.js'),
   module: {
     loaders: [
       {
@@ -40,6 +41,7 @@ const compiler = webpack({
     ],
   },
   output: {filename: 'app.js', path: '/'},
+  devtool: 'source-map'
 });
 const app = new WebpackDevServer(compiler, {
   contentBase: '/public/',
@@ -47,8 +49,12 @@ const app = new WebpackDevServer(compiler, {
   publicPath: '/js/',
   stats: {colors: true},
 });
+
+nunjucks.configure('views', {autoescape: true});
+
 // Serve static resources
-app.use('/', express.static(path.resolve(__dirname, 'public')));
+app.use('/public', express.static(path.resolve(__dirname, 'public')));
+app.use('/', renderServer);
 app.listen(APP_PORT, () => {
   console.log(`App is now running on http://localhost:${APP_PORT}`);
 });

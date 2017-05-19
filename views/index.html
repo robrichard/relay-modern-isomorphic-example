@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Relay • TodoMVC</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/public/base.css">
+    <link rel="stylesheet" href="/public/index.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">{{renderedComponent | safe}}</div>
     <script type="text/javascript">
       // Force `fetch` polyfill to workaround Chrome not displaying request body
       // in developer tools for the native `fetch`.
       self.fetch = null;
+      self.records = {{records | safe}};
     </script>
     <script src="http://localhost:3000/webpack-dev-server.js"></script>
     <script src="js/app.js"></script>
