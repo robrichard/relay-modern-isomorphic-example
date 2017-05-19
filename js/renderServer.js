@@ -12,7 +12,7 @@ import RelayLookupQueryRenderer from './RelayLookupQueryRenderer';
 import TodoApp from './components/TodoApp';
 import rootQuery from './root';
 
-const variables = {status: null};
+const variables = {};
 
 export default function(req, res, next) {
   const environment = getRelayEnvironment();
