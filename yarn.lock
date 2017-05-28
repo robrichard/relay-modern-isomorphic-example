@@ -3036,6 +3036,14 @@ relay-compiler@^1.0.0:
     signedsource "^1.0.0"
     yargs "^7.0.2"
 
+relay-query-lookup-renderer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/relay-query-lookup-renderer/-/relay-query-lookup-renderer-1.0.1.tgz#16a846afc9417998ec3fbf280c13408e1c4c8708"
+  dependencies:
+    deep-freeze "^0.0.1"
+    fbjs "^0.8.1"
+    prop-types "^15.5.7"
+
 relay-runtime@~1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/relay-runtime/-/relay-runtime-1.0.0.tgz#3011ba84e844f154b14edf401950a8ed2c95cb2b"

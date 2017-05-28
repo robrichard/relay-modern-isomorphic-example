@@ -8,7 +8,7 @@ import nunjucks from 'nunjucks';
 import React from 'react';
 import {renderToString} from 'react-dom/server';
 import getRelayEnvironment from './getRelayEnvironment';
-import RelayLookupQueryRenderer from './RelayLookupQueryRenderer';
+import QueryLookupRenderer from 'relay-query-lookup-renderer';
 import TodoApp from './components/TodoApp';
 import rootQuery from './root';
 
@@ -26,7 +26,7 @@ export default function(req, res, next) {
     operation,
     onCompleted: () => {
       const renderedComponent = renderToString(
-        <RelayLookupQueryRenderer
+        <QueryLookupRenderer
           lookup
           environment={environment}
           query={rootQuery}

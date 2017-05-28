@@ -2,7 +2,7 @@ import 'todomvc-common';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RelayLookupQueryRenderer from './RelayLookupQueryRenderer';
+import QueryLookupRenderer from 'relay-query-lookup-renderer';
 import TodoApp from './components/TodoApp';
 import rootQuery from './root';
 import getRelayEnvironment from './getRelayEnvironment';
@@ -11,7 +11,7 @@ const mountNode = document.getElementById('root');
 const environment = getRelayEnvironment(window.records);
 
 ReactDOM.render(
-  <RelayLookupQueryRenderer
+  <QueryLookupRenderer
     lookup
     environment={environment}
     query={rootQuery}
