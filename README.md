@@ -2,6 +2,11 @@
 
 This is the [todo-modern example](https://github.com/relayjs/relay-examples/tree/master/todo-modern) updated to use universal/isomorphic/server side renderering. 
 
+## Approach
+On the server (renderServer.js), we fetch the data needed directly by using the `fetchQuery` function that is exported by `react-relay`. This function returns a promise that resolves with the result of the query. We then use [relay-context-provider](https://www.npmjs.com/package/relay-context-provider) to synchronously render the components to string. The Relay store is then serialized to JSON and passed to the client.
+
+On the client (app.js), a new environment is created with the data sent from the server. Then the components are rendered using [relay-query-lookup-renderer](https://www.npmjs.com/package/relay-query-lookup-renderer). With the lookup prop, the component will be rendered immediately with the data from the store. In a more complex app you may change the variables passed to the QueryLookupRenderer and it will fetch the data if needed.
+
 ## Installation
 
 ```

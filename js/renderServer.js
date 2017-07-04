@@ -7,27 +7,10 @@ import {renderToString} from 'react-dom/server';
 import getRelayEnvironment from './getRelayEnvironment';
 import PropTypes from 'prop-types';
 import TodoApp from './components/TodoApp';
+import RelayContextProvider from 'relay-context-provider';
 import rootQuery from './root';
 
 const variables = {};
-
-class RelayContextProvider extends React.Component {
-  getChildContext() {
-    return {
-      relay: {
-        environment: this.props.environment,
-        variables: this.props.variables
-      }
-    }
-  }
-  render() {
-    return this.props.render();
-  }
-}
-
-RelayContextProvider.childContextTypes = {
-  relay: PropTypes.object.isRequired
-};
 
 export default async function(req, res, next) {
   const environment = getRelayEnvironment();
@@ -36,8 +19,9 @@ export default async function(req, res, next) {
     <RelayContextProvider
       environment={environment}
       variables={variables}
-      render={() => <TodoApp {...data}/>}
-    />
+    >
+      <TodoApp {...data}/>
+    </RelayContextProvider>
   );
 
 
