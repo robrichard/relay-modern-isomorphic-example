@@ -1,6 +1,8 @@
 # Isomorphic Relay Modern TodoMVC
 
-This is the [todo-modern example](https://github.com/relayjs/relay-examples/tree/master/todo-modern) updated to use universal/isomorphic/server side renderering. 
+This is the [todo-modern example](https://github.com/relayjs/relay-examples/tree/master/todo-modern) updated to use universal/isomorphic/server side renderering.
+
+How? [See the diff](https://github.com/robrichard/relay-modern-isomorphic-example/compare/4a1b2ca08d5bd841dbc935eabcf1614f9272d303...master)
 
 ## Approach
 On the server (renderServer.js), we fetch the data needed directly by using the `fetchQuery` function that is exported by `react-relay`. This function returns a promise that resolves with the result of the query. We then use [relay-context-provider](https://www.npmjs.com/package/relay-context-provider) to synchronously render the components to string. The Relay store is then serialized to JSON and passed to the client.
