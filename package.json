@@ -27,6 +27,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-relay": "2.0.0-rc.2",
+    "relay-query-lookup-renderer": "^4.0.0-rc.3",
     "todomvc-app-css": "^2.1.0",
     "todomvc-common": "^1.0.3",
     "webpack": "1.13.2",

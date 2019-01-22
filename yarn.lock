@@ -4519,6 +4519,14 @@ relay-compiler@2.0.0-rc.2:
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
+relay-query-lookup-renderer@^4.0.0-rc.3:
+  version "4.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/relay-query-lookup-renderer/-/relay-query-lookup-renderer-4.0.0-rc.3.tgz#2016adbbb12e4592332693a1fb573f7ecaef5b3b"
+  integrity sha512-rbNUO9P9L0J0eNJEO7UgF6vcPY/tUcMASFIevE68JB23af4mewRX0yyaBiD7Xfflz3U4AzUWYq+dAxF3lqshvw==
+  dependencies:
+    deep-freeze "^0.0.1"
+    fbjs "^0.8.1"
+
 relay-runtime@2.0.0-rc.2:
   version "2.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/relay-runtime/-/relay-runtime-2.0.0-rc.2.tgz#3b2f38d08eac90f63fcf56bf95e106673706da48"
